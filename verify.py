@@ -8,7 +8,7 @@ WANT = [
 root = next((d for d in sys.argv[1:] + ["box.utm", "box"] if os.path.isdir(d)), None)
 if not root:
     sys.exit("No box.utm or box folder here. cd to where you ran get.sh, or pass the folder name.")
-IOS = (2801, "3ee078ccb988e9b2895afba97852f0c416c5a0cfb02cf7d6c41421b208ac9481")
+IOS = (2805, "f82adfaa5335cebf6253c9d2ae4a75a1adffadf3dfe040753554835d38197c02")
 bad = 0
 for rel, size, sha in WANT:
     p = os.path.join(root, rel)

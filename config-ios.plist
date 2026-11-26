@@ -114,7 +114,7 @@
 		<key>Architecture</key>
 		<string>aarch64</string>
 		<key>CPU</key>
-		<string>default</string>
+		<string>neoverse-n1</string>
 		<key>CPUCount</key>
 		<integer>0</integer>
 		<key>CPUFlagsAdd</key>

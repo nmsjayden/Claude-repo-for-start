@@ -33,7 +33,7 @@ fi
 
 echo "patching config for iPhone..."
 curl -fsL --retry 5 -o config-ios.tmp "$R/config-ios.plist" || { rm -f config-ios.tmp; echo "config download failed - run again"; exit 1; }
-if [ "$(size config-ios.tmp)" != 2801 ]; then rm -f config-ios.tmp; echo "config download incomplete - run again"; exit 1; fi
+if ! grep -q "</plist>" config-ios.tmp; then rm -f config-ios.tmp; echo "config download incomplete - run again"; exit 1; fi
 [ -f box.utm/config.plist ] && [ ! -f config-mac.plist.bak ] && cp box.utm/config.plist config-mac.plist.bak
 mv config-ios.tmp box.utm/config.plist
 
